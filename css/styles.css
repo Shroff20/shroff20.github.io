@@ -123,7 +123,7 @@ ul, ol {
   list-style: none;
 }
 
-img, svg {
+img, svg, video {
   display: block;
   max-width: 100%;
 }
