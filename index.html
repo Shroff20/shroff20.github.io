@@ -385,35 +385,13 @@
 
         <!-- Projects Grid -->
         <div class="projects-grid">
-          <!-- Project 1: PINNs -->
+          <!-- Project 1: PINNs & Reduced-Order Models -->
           <article class="project-card" data-category="ml-dynamics">
             <div class="project-media">
               <span class="project-badge">Machine Learning</span>
-              <!-- Technical Schematic Illustration -->
-              <svg class="visual-canvas" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#1e3a8a"/>
-                    <stop offset="100%" stop-color="#3b82f6"/>
-                  </linearGradient>
-                </defs>
-                <rect width="400" height="200" fill="#0f172a"/>
-                <!-- Neural Network Wave Diagram -->
-                <path d="M 20 100 Q 100 20, 200 100 T 380 100" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="4,4"/>
-                <path d="M 20 100 Q 100 180, 200 100 T 380 100" fill="none" stroke="#8b5cf6" stroke-width="2.5"/>
-                <!-- Nodes -->
-                <circle cx="80" cy="60" r="8" fill="#60a5fa"/>
-                <circle cx="80" cy="140" r="8" fill="#60a5fa"/>
-                <circle cx="200" cy="100" r="10" fill="#a78bfa"/>
-                <circle cx="320" cy="60" r="8" fill="#3b82f6"/>
-                <circle cx="320" cy="140" r="8" fill="#3b82f6"/>
-                <!-- Connecting lines -->
-                <line x1="80" y1="60" x2="200" y2="100" stroke="#475569" stroke-width="1.5"/>
-                <line x1="80" y1="140" x2="200" y2="100" stroke="#475569" stroke-width="1.5"/>
-                <line x1="200" y1="100" x2="320" y2="60" stroke="#475569" stroke-width="1.5"/>
-                <line x1="200" y1="100" x2="320" y2="140" stroke="#475569" stroke-width="1.5"/>
-                <text x="200" y="180" font-family="monospace" font-size="12" fill="#94a3b8" text-anchor="middle">&part;u/&part;t + u &part;u/&part;x = &nu; &part;&sup2;u/&part;x&sup2;</text>
-              </svg>
+              <video class="visual-canvas" autoplay loop muted playsinline preload="metadata" title="Reduced-Order Models and Flow Modes simulation">
+                <source src="assets/flowmodes.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="project-body">
               <h3>Reduced-Order Models including Physics-Informed Neural Networks</h3>
@@ -437,24 +415,38 @@
               </div>
             </div>
           </article>
-
+          <!-- Project: Teaching and Training -->
+          <article class="project-card" data-category="Education">
+            <div class="project-media">
+              <span class="project-badge">Training and Education</span>
+              <img src="assets/fbd.png" alt="Free Body Diagram - Teaching and Training" class="visual-canvas">
+            </div>
+            <div class="project-body">
+              <h3>Gamified Learning</h3>
+              <p>
+                Transforming technical education by integrating real-world design and gamified learning.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Curriculum Development</span>
+                <span class="tech-tag">Training</span>
+                <span class="tech-tag">Assessment</span>
+             </div>
+              <div class="project-footer">
+                <!-- <button class="btn btn-outline btn-sm view-project-btn" data-project="mems-friction">View Details</button> -->
+                <div class="project-links">
+                  <a href="#contact" class="icon-link" title="Discuss this project">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
           <!-- Project 2: MEMS Friction & Materials -->
           <article class="project-card" data-category="mechanics-materials">
             <div class="project-media">
               <span class="project-badge">Experimentation and Modeling</span>
-              <!-- Technical Schematic Illustration -->
-              <svg class="visual-canvas" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                <rect width="400" height="200" fill="#0f172a"/>
-                <!-- Multi-asperity contact profile -->
-                <path d="M 10 130 C 50 130, 70 80, 110 80 C 150 80, 170 120, 210 120 C 250 120, 270 90, 310 90 C 350 90, 370 130, 390 130 L 390 170 L 10 170 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
-                <path d="M 10 60 C 50 60, 70 80, 110 80 C 150 80, 170 40, 210 40 C 250 40, 270 90, 310 90 C 350 90, 370 60, 390 60" fill="none" stroke="#f43f5e" stroke-width="2.5"/>
-                <!-- Normal and tangential force vectors -->
-                <line x1="200" y1="10" x2="200" y2="35" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrow)"/>
-                <polygon points="200,40 195,30 205,30" fill="#fbbf24"/>
-                <line x1="230" y1="40" x2="270" y2="40" stroke="#34d399" stroke-width="3"/>
-                <polygon points="275,40 265,35 265,45" fill="#34d399"/>
-                <text x="200" y="185" font-family="monospace" font-size="12" fill="#94a3b8" text-anchor="middle">F_friction = &tau;_0 &middot; A_real + &alpha; F_normal</text>
-              </svg>
+              <video class="visual-canvas" autoplay loop muted playsinline preload="metadata" title="Nanoscale Contact Dynamics simulation">
+                <source src="assets/slider.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="project-body">
               <h3>Nanoscale Contact Dynamics</h3>
@@ -590,7 +582,7 @@
               </div>
               <div class="contact-card-content">
                 <h4>Prompt Turnaround</h4>
-                <p>Typically replies within 48 hours</p>
+                <p>Typically replies within a few days</p>
                 <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-top: 4px;">All inquiries are treated with strict confidentiality.</span>
               </div>
             </div>

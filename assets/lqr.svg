@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+
+  /* Circle floating animation */
+  .circle-target {
+    animation: float 6s ease-in-out infinite alternate;
+  }
+  
+  /* Central cluster pulses and gently rotates */
+  .center-cluster {
+    transform-origin: 800px 500px;
+    animation: spin-pulse 8s ease-in-out infinite alternate;
+  }
+  
+  /* Burst lines burst out and retract subtly */
+  .burst-line {
+    transform-origin: 800px 500px;
+    animation: flex-line 3s ease-in-out infinite alternate;
+  }
+  
+  /* Delay lines for organic motion */
+  .dl-1 { animation-delay: 0s; }
+  .dl-2 { animation-delay: 0.4s; }
+  .dl-3 { animation-delay: 0.8s; }
+  .dl-4 { animation-delay: 1.2s; }
+  .dl-5 { animation-delay: 1.6s; }
+
+  /* Arc movement */
+  .arc-element {
+    transform-origin: 800px 500px;
+    animation: arc-shift 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes float {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-15px, 20px); }
+  }
+
+  @keyframes spin-pulse {
+    0% { transform: scale(0.95) rotate(-5deg); }
+    100% { transform: scale(1.08) rotate(5deg); }
+  }
+
+  @keyframes flex-line {
+    0% { transform: scale(0.92); }
+    100% { transform: scale(1.15); }
+  }
+
+  @keyframes arc-shift {
+    0% { transform: rotate(-3deg) scale(0.98); }
+    100% { transform: rotate(4deg) scale(1.03); }
+  }
+</style>
+
+<!-- Filter for clean drop shadows if needed -->
+<filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+  <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08" />
+</filter>
+
+
+<!-- Grey Arc Structures (Simplified from complex messy grey paths) -->
+<g class="arc-element">
+  <path d="M 740 450 A 60 60 0 0 0 745 520" fill="none" stroke="#bbbfbe" stroke-width="14" stroke-linecap="round" />
+  <path d="M 820 540 A 70 70 0 0 0 885 500" fill="none" stroke="#d0d4d3" stroke-width="12" stroke-linecap="round" />
+</g>
+
+<!-- Burst Rays (Simplified color palette matching original: Orange, Purple, Green, Yellow, Dark Red) -->
+<g>
+  <!-- Purple lines -->
+  <line class="burst-line dl-1" x1="800" y1="500" x2="720" y2="460" stroke="#6b21a8" stroke-width="7" stroke-linecap="round" />
+  <line class="burst-line dl-3" x1="800" y1="500" x2="890" y2="460" stroke="#6b21a8" stroke-width="7" stroke-linecap="round" />
+
+  <!-- Green lines -->
+  <line class="burst-line dl-2" x1="800" y1="500" x2="780" y2="425" stroke="#65a30d" stroke-width="7" stroke-linecap="round" />
+  <line class="burst-line dl-5" x1="800" y1="500" x2="865" y2="535" stroke="#65a30d" stroke-width="7" stroke-linecap="round" />
+
+  <!-- Red/Brown lines -->
+  <line class="burst-line dl-4" x1="800" y1="500" x2="735" y2="480" stroke="#991b1b" stroke-width="7" stroke-linecap="round" />
+  <line class="burst-line dl-1" x1="800" y1="500" x2="880" y2="515" stroke="#991b1b" stroke-width="7" stroke-linecap="round" />
+
+  <!-- Orange lines -->
+  <line class="burst-line dl-3" x1="800" y1="500" x2="750" y2="440" stroke="#ea580c" stroke-width="8" stroke-linecap="round" />
+  <line class="burst-line dl-2" x1="800" y1="500" x2="875" y2="490" stroke="#ea580c" stroke-width="8" stroke-linecap="round" />
+
+  <!-- Yellow accents -->
+  <line class="burst-line dl-5" x1="800" y1="500" x2="760" y2="510" stroke="#eab308" stroke-width="6" stroke-linecap="round" />
+  <line class="burst-line dl-4" x1="800" y1="500" x2="860" y2="445" stroke="#eab308" stroke-width="6" stroke-linecap="round" />
+</g>
+
+<!-- Central Diamond Nucleus -->
+<polygon points="800,480 820,500 800,520 780,500" fill="#f59e0b" stroke="#d97706" stroke-width="3" />
