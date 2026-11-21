@@ -1,24 +1,47 @@
-﻿<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Sameer Shroff | Computational Mechanics, Dynamics & Machine Learning</title>
-  <meta name="description" content="Official portfolio and consulting website for Dr. Sameer Shroff, Ph.D. in Mechanical Engineering (Carnegie Mellon University). Specializing in computational mechanics, dynamics, materials mechanics, and physics-informed machine learning.">
-  <meta name="keywords" content="Sameer Shroff, Dr. Sameer Shroff, Carnegie Mellon, Bettis, Mechanical Engineering, FEA, Machine Learning, Physics-Informed Neural Networks, MEMS, Materials Mechanics, Pittsburgh">
+  <meta name="description"
+    content="Official portfolio and consulting website for Dr. Sameer Shroff, Ph.D. in Mechanical Engineering (Carnegie Mellon University). Specializing in computational mechanics, dynamics, materials mechanics, and physics-informed machine learning.">
+  <meta name="keywords"
+    content="Sameer Shroff, Dr. Sameer Shroff, Carnegie Mellon, Bettis, Mechanical Engineering, FEA, Machine Learning, Physics-Informed Neural Networks, MEMS, Materials Mechanics, Pittsburgh">
   <meta name="author" content="Dr. Sameer Shroff">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dr. Sameer Shroff | Engineering Consulting & Research">
-  <meta property="og:description" content="Showcasing contacts, services, projects, and research in computational mechanics and dynamics.">
+  <meta property="og:description"
+    content="Showcasing contacts, services, projects, and research in computational mechanics and dynamics.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Instant Theme Detection Script (Defaults to Light Mode) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) { }
+    })();
+  </script>
 </head>
+
 <body>
   <!-- Ambient Grid Overlay -->
   <div class="bg-grid-overlay" aria-hidden="true"></div>
@@ -34,11 +57,10 @@
         </div>
       </a>
 
-      <!-- Navigation Links -->
+      <!-- Navigation Links (Services removed) -->
       <nav id="nav-links" class="nav-links" aria-label="Main Navigation">
         <a href="#about" class="nav-link">Background</a>
         <a href="#skills" class="nav-link">Skills</a>
-        <a href="#services" class="nav-link">Services</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
@@ -48,11 +70,13 @@
         <!-- Theme Toggle -->
         <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
           <!-- Moon Icon (for light mode) -->
-          <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
           <!-- Sun Icon (for dark mode) -->
-          <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -69,7 +93,8 @@
 
         <!-- Mobile Menu Toggle Button -->
         <button id="menu-toggle" class="menu-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -100,13 +125,15 @@
           </h2>
 
           <p class="hero-bio">
-            Bridging fundamental mechanics of materials, thermo-structural simulation and dynamics, and AI/ML to solve mission-critical engineering problems.
+            Bridging fundamental mechanics of materials, thermo-structural simulation and dynamics, and AI/ML to solve
+            mission-critical engineering problems.
           </p>
 
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary">
               <span>Explore Projects</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
@@ -115,7 +142,8 @@
               <span>Contact Directly</span>
             </a>
             <button class="btn btn-outline copy-trigger" data-copy="sshroff@andrew.cmu.edu" title="Copy email address">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
               </svg>
@@ -134,7 +162,7 @@
               <div class="stat-label">R&D & Engineering</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number gradient-text">>$100M</div>
+              <div class="stat-number gradient-text">&gt;$100M</div>
               <div class="stat-label">Dollars saved</div>
             </div>
           </div>
@@ -151,36 +179,37 @@
                 <h3>Sameer S. Shroff, Ph.D.</h3>
                 <p>Mechanical Engineering & Applied AI</p>
                 <p style="color: var(--accent-primary); font-size: 0.8rem; font-weight: 600; margin-top: 2px;">
-                  Pittsburgh, PA 
+                  Pittsburgh, PA
                 </p>
               </div>
             </div>
 
             <div class="expertise-chips">
               <span class="chip">Dynamics and Controls</span>
-              <span class="chip">AI/ML Modeling</span>			
-              <span class="chip">MLOps</span>			
-              <span class="chip">Digital Twins</span>			
-              <span class="chip">Condition Informed Maintenance</span>			
+              <span class="chip">AI/ML Modeling</span>
+              <span class="chip">MLOps</span>
+              <span class="chip">Digital Twins</span>
+              <span class="chip">Condition Informed Maintenance</span>
               <span class="chip">Mechanics of Materials</span>
               <span class="chip">Tribology</span>
               <span class="chip">Multiphysics Modeling</span>
               <span class="chip">FEA</span>
               <span class="chip">Statistics</span>
               <span class="chip">LLMs + Embeddings</span>
-		  
             </div>
 
             <div class="hero-quick-details">
               <div class="detail-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
                 <a href="mailto:sshroff@andrew.cmu.edu">sshroff@andrew.cmu.edu</a>
               </div>
               <div class="detail-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
@@ -192,7 +221,6 @@
       </div>
     </section>
 
-
     <!-- =======================================================================
          Projects & Research Section
          ======================================================================= -->
@@ -201,9 +229,7 @@
         <div class="section-header">
           <span class="section-tag">Portfolio & Research</span>
           <h2 class="section-title">Selected Projects & Technical Investigations</h2>
-
         </div>
-
 
         <!-- Projects Grid -->
         <div class="projects-grid">
@@ -211,14 +237,15 @@
           <article class="project-card" data-category="ml-dynamics">
             <div class="project-media">
               <span class="project-badge">Machine Learning</span>
-              <video class="visual-canvas" autoplay loop muted playsinline preload="metadata" title="Reduced-Order Models and Flow Modes simulation">
+              <video class="visual-canvas" autoplay loop muted playsinline preload="metadata"
+                title="Reduced-Order Models and Flow Modes simulation">
                 <source src="assets/flowmodes2.mp4" type="video/mp4">
               </video>
             </div>
             <div class="project-body">
               <h3>Reduced-Order Models including Physics-Informed Neural Networks</h3>
               <p>
-                 10,000x acceleration of engineering simulations, enabling optimization, controls, and real-time design.
+                10,000x acceleration of engineering simulations, enabling optimization, controls, and real-time design.
               </p>
               <div class="project-tech-tags">
                 <span class="tech-tag">PyTorch</span>
@@ -228,53 +255,62 @@
                 <span class="tech-tag">SVD/DMD</span>
               </div>
               <div class="project-footer">
-                <!-- <button class="btn btn-outline btn-sm view-project-btn" data-project="pinn-dynamics">View Details</button> -->
                 <div class="project-links">
                   <a href="#contact" class="icon-link" title="Discuss this project">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
                   </a>
                 </div>
               </div>
             </div>
           </article>
+
           <!-- Project: Teaching and Training -->
           <article class="project-card" data-category="Education">
             <div class="project-media">
               <span class="project-badge">Training and Education</span>
-              <video class="visual-canvas" autoplay loop muted playsinline preload="metadata" title="Reduced-Order Models and Flow Modes simulation">
+              <video class="visual-canvas" autoplay loop muted playsinline preload="metadata"
+                title="Reduced-Order Models and Flow Modes simulation">
                 <source src="assets/cavefly_sm.mp4" type="video/mp4">
-              </video>            </div>
+              </video>
+            </div>
             <div class="project-body">
               <h3>Gamified Learning</h3>
               <p>
-                Transforming technical education by integrating real-world design and gamified learning.</p>
+              Transforming technical education by integrating real-world design and gamified learning.
+              </p>
               <div class="project-tech-tags">
                 <span class="tech-tag">Curriculum Development</span>
                 <span class="tech-tag">Training</span>
                 <span class="tech-tag">Assessment</span>
-             </div>
+              </div>
               <div class="project-footer">
-                <!-- <button class="btn btn-outline btn-sm view-project-btn" data-project="mems-friction">View Details</button> -->
                 <div class="project-links">
                   <a href="#contact" class="icon-link" title="Discuss this project">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
                   </a>
                 </div>
               </div>
             </div>
           </article>
+
           <!-- Project 2: MEMS Friction & Materials -->
           <article class="project-card" data-category="mechanics-materials">
             <div class="project-media">
               <span class="project-badge">Experimentation and Modeling</span>
-              <video class="visual-canvas" autoplay loop muted playsinline preload="metadata" title="Nanoscale Contact Dynamics simulation">
+              <video class="visual-canvas" autoplay loop muted playsinline preload="metadata"
+                title="Nanoscale Contact Dynamics simulation">
                 <source src="assets/slider.mp4" type="video/mp4">
               </video>
             </div>
             <div class="project-body">
               <h3>Nanoscale Contact Dynamics</h3>
               <p>
-                Experimental testing and modeling of multi-asperity contact mechanics, surface roughness interactions, and environmental tribology in microelectromechanical systems.
+                Experimental testing and modeling of multi-asperity contact mechanics, surface roughness interactions,
+                and environmental tribology in microelectromechanical systems.
               </p>
               <div class="project-tech-tags">
                 <span class="tech-tag">MEMS</span>
@@ -282,19 +318,18 @@
                 <span class="tech-tag">AFM</span>
                 <span class="tech-tag">Contact Mechanics</span>
                 <span class="tech-tag">SEM</span>
-             </div>
+              </div>
               <div class="project-footer">
-                <!-- <button class="btn btn-outline btn-sm view-project-btn" data-project="mems-friction">View Details</button> -->
                 <div class="project-links">
                   <a href="#contact" class="icon-link" title="Discuss this project">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
                   </a>
                 </div>
               </div>
             </div>
           </article>
-
-      
 
 
           <!-- Project 6: Thermal-Structural Coupled -->
@@ -308,7 +343,8 @@
             <div class="project-body">
               <h3>Coupled Multi-Physics Thermal-Stress Assessment</h3>
               <p>
-                Multi-physics numerical analysis of structures under severe transient thermal gradients, cyclic thermal fatigue, and temperature-dependent elastic-plastic behavior.
+                Multi-physics numerical analysis of structures under severe transient thermal gradients, cyclic thermal
+                fatigue, and temperature-dependent elastic-plastic behavior.
               </p>
               <div class="project-tech-tags">
                 <span class="tech-tag">Thermal-Stress</span>
@@ -318,17 +354,18 @@
                 <span class="tech-tag">Crack Propagation</span>
               </div>
               <div class="project-footer">
-                <!-- <button class="btn btn-outline btn-sm view-project-btn" data-project="thermal-structural">View Details</button> -->
                 <div class="project-links">
                   <a href="#contact" class="icon-link" title="Discuss this project">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
                   </a>
                 </div>
               </div>
             </div>
           </article>
 
-        <!-- Project 6: Thermal-Structural Coupled -->
+          <!-- Project: Biodynamics and Biomechanics -->
           <article class="project-card" data-category="experimentation and modeling">
             <div class="project-media">
               <span class="project-badge">Modeling</span>
@@ -347,10 +384,11 @@
                 <span class="tech-tag">System ID</span>
               </div>
               <div class="project-footer">
-                <!-- <button class="btn btn-outline btn-sm view-project-btn" data-project="thermal-structural">View Details</button> -->
                 <div class="project-links">
                   <a href="#contact" class="icon-link" title="Discuss this project">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -359,6 +397,7 @@
         </div>
       </div>
     </section>
+
     <!-- =======================================================================
          Background & About Section
          ======================================================================= -->
@@ -368,7 +407,8 @@
           <span class="section-tag">Background & Bio</span>
           <h2 class="section-title">Deep Technical Expertise in Mechanics & Computation</h2>
           <p class="section-subtitle">
-            A career focused on rigorous physical modeling, high-consequence system validation, and pioneering the intersection of scientific computing and machine learning.
+            A career focused on rigorous physical modeling, high-consequence system validation, and pioneering the
+            intersection of scientific computing and machine learning.
           </p>
         </div>
 
@@ -376,26 +416,35 @@
           <!-- Left Column: Biography Narrative -->
           <div class="about-narrative">
             <p>
-              I am a data scientist and computational scientist with deep roots in mechanics, dynamics, and multiphysics systems modeling. 
+              I am a data scientist and computational scientist with deep roots in mechanics, dynamics, and multiphysics
+              systems modeling.
             </p>
             <p>
-              My doctoral research at Carnegie Mellon University investigated the intricate contact physics, friction phenomena, and surface mechanics of microelectromechanical systems (MEMS), characterizing dynamic friction transitions, surface roughness interactions, and environmental effects at micro and nano scales.
+              My doctoral research at Carnegie Mellon University investigated the intricate contact physics, friction
+              phenomena, and surface mechanics of microelectromechanical systems (MEMS), characterizing dynamic friction
+              transitions, surface roughness interactions, and environmental effects at micro and nano scales.
             </p>
             <p>
-              Following my graduate work at CMU, I joined Naval Nuclear Laboratory, tackling mission-critical engineering problems across structural, nuclear, and thermofluids domains.   I continue to serve as an adjunct professor at CMU, teaching courses such as Feedback Control Systems.
+              Following my graduate work at CMU, I joined Naval Nuclear Laboratory, tackling mission-critical
+              engineering problems across structural, nuclear, and thermofluids domains. I continue to serve as an
+              adjunct professor at CMU, teaching courses such as Feedback Control Systems.
             </p>
             <div class="quote-box">
-              "AI/ML modeling, such as physics-informed machine learning, allows us to achieve high-fidelity predictions in a fraction of traditional computational times."
+              "AI/ML modeling, such as physics-informed machine learning, allows us to achieve high-fidelity predictions
+              in a fraction of traditional computational times."
             </div>
             <p>
-              Today, I provide specialized technical consulting, dynamic modeling, and research advisory services to organizations seeking to modernize their scientific modeling pipelines, accelerate numerical simulations, and model and validate complex systems.
+              Today, I provide specialized technical consulting, dynamic modeling, and research advisory services to
+              organizations seeking to modernize their scientific modeling pipelines, accelerate numerical simulations,
+              and model and validate complex systems.
             </p>
           </div>
 
           <!-- Right Column: Interactive Timeline Card -->
           <div class="timeline-card">
             <h3>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
               </svg>
@@ -407,56 +456,63 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2016 &ndash; Present</div>
-                <div class="timeline-title">Principal Data Scientist, Principal Mechanical Engineer, & Technical Mentor</div>
+                <div class="timeline-title">Principal Data Scientist, Principal Mechanical Engineer, & Technical Mentor
+                </div>
                 <div class="timeline-company">Naval Nuclear Laboratory / Bettis Atomic Power Laboratory </div>
                 <div class="timeline-desc">
-                  Lead development of AI/ML tools and models, computational analysis, structural dynamics, and AI/ML surrogate model integration for critical engineering systems that span structural, nuclear, thermofluids domains.
+                  Lead development of AI/ML tools and models, computational analysis, structural dynamics, and AI/ML
+                  surrogate model integration for critical engineering systems that span structural, nuclear,
+                  thermofluids domains.
                 </div>
               </div>
-			  
-              <!-- Item 1: Bettis -->
+
+              <!-- Item 2: Carnegie Mellon University Adjunct -->
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2017 &ndash; Present</div>
                 <div class="timeline-title">Adjunct Professor</div>
                 <div class="timeline-company">Carnegie Mellon University </div>
                 <div class="timeline-desc">
-                  Transforming technical education by bringing real-world design and gamified learning to 500+ students. Championing instructional excellence by steering a collaborative team of teaching assistants and academic support staff.
+                  Transforming technical education by bringing real-world design and gamified learning to 500+ students.
+                  Championing instructional excellence by steering a collaborative team of teaching assistants and
+                  academic support staff.
                 </div>
               </div>
-              <!-- Item 2: Carnegie Mellon University -->
+
+              <!-- Item 3: Carnegie Mellon University Ph.D. -->
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2011 &ndash; 2015</div>
                 <div class="timeline-title">Ph.D. in Mechanical Engineering</div>
                 <div class="timeline-company">NSF Research Fellow / Carnegie Mellon University</div>
                 <div class="timeline-desc">
-                  Doctoral research: Nanoscale mechanics of materials. Investigated micro-electro-mechanical-systems (MEMS), thin films, friction, adhesion, and multi-asperity contact mechanics with experimental nanoscale tests and associated numerical simulations.
+                  Doctoral research: Nanoscale mechanics of materials. Investigated micro-electro-mechanical-systems
+                  (MEMS), thin films, friction, adhesion, and multi-asperity contact mechanics with experimental
+                  nanoscale tests and associated numerical simulations.
                 </div>
-              </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Technical Skills / Competencies Subsection -->
-        <div id="skills" class="skills-section-wrapper">
-          <div class="section-header" style="margin-bottom: 2rem;">
-            <span class="section-tag">Core Competencies</span>
-            <h3 style="font-size: 1.75rem; font-weight: 700;">Technical Skills & Tooling</h3>
-          </div>
+      <!-- Technical Skills / Competencies Subsection -->
+      <div id="skills" class="skills-section-wrapper">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-tag">Core Competencies</span>
+          <h3 style="font-size: 1.75rem; font-weight: 700;">Technical Skills & Tooling</h3>
+        </div>
 
-          <div class="skills-grid">
-            <!-- Skill Category 1 -->
-            <div class="skill-category-card">
-              <div class="skill-icon-header">
-                <div class="skill-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </svg>
-                </div>
-                <h4>Scientific Computing & ML</h4>
+        <div class="skills-grid">
+          <!-- Skill Category 1 -->
+          <div class="skill-category-card">
+            <div class="skill-icon-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
               </div>
               <div class="skill-tags">
                 <span class="skill-tag">Python (NumPy, SciPy)</span>
@@ -464,196 +520,224 @@
                 <span class="skill-tag">ROMs and Surrogate Modeling</span>
                 <span class="skill-tag">C / C++</span>
                 <span class="skill-tag">MATLAB / Simulink</span>
-				<span class="skill-tag">High-Performance Computing (HPC)</span>
+                <span class="skill-tag">High-Performance Computing (HPC)</span>
               </div>
             </div>
-
-            <!-- Skill Category 2 -->
-            <div class="skill-category-card">
-              <div class="skill-icon-header">
-                <div class="skill-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
-                  </svg>
-                </div>
-                <h4>Structural Mechanics & FEA</h4>
-              </div>
-              <div class="skill-tags">
-                <span class="skill-tag">ANSYS Mechanical</span>
-                <span class="skill-tag">Abaqus Standard/Explicit</span>
-                <span class="skill-tag">Continuum Mechanics</span>
-                <span class="skill-tag">Nonlinear Transient Dynamics</span>
-                <span class="skill-tag">Shock & Vibration</span>
-                <span class="skill-tag">Fatigue & Fracture</span>
-              </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python (NumPy, SciPy)</span>
+              <span class="skill-tag">PyTorch / TensorFlow</span>
+              <span class="skill-tag">ROMs and Surrogate Modeling</span>
+              <span class="skill-tag">C / C++</span>
+              <span class="skill-tag">MATLAB / Simulink</span>
+              <span class="skill-tag">High-Performance Computing (HPC)</span>
             </div>
+          </div>
 
-            <!-- Skill Category 3 -->
-            <div class="skill-category-card">
-              <div class="skill-icon-header">
-                <div class="skill-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="m4.93 4.93 4.24 4.24"></path>
-                    <path d="m14.83 9.17 4.24-4.24"></path>
-                    <path d="m14.83 14.83 4.24 4.24"></path>
-                    <path d="m9.17 14.83-4.24 4.24"></path>
-                  </svg>
-                </div>
-                <h4>Materials & Microscale</h4>
+          <!-- Skill Category 2 -->
+          <div class="skill-category-card">
+            <div class="skill-icon-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
               </div>
-              <div class="skill-tags">
-                <span class="skill-tag">MEMS Mechanics</span>
-                <span class="skill-tag">Micro-tribology & Friction</span>
-                <span class="skill-tag">Contact Topography (AFM)</span>
-                <span class="skill-tag">Thin Film Mechanics</span>
-                <span class="skill-tag">Constitutive Modeling</span>
-                <span class="skill-tag">Multi-Scale Plasticity</span>
-              </div>
+              <h4>Structural Mechanics & FEA</h4>
             </div>
+            <div class="skill-tags">
+              <span class="skill-tag">ANSYS Mechanical</span>
+              <span class="skill-tag">Abaqus Standard/Explicit</span>
+              <span class="skill-tag">Continuum Mechanics</span>
+              <span class="skill-tag">Nonlinear Transient Dynamics</span>
+              <span class="skill-tag">Shock & Vibration</span>
+              <span class="skill-tag">Fatigue & Fracture</span>
+            </div>
+          </div>
 
-            <!-- Skill Category 4 -->
-            <div class="skill-category-card">
-              <div class="skill-icon-header">
-                <div class="skill-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                  </svg>
-                </div>
-                <h4>Engineering Practices</h4>
+          <!-- Skill Category 3 -->
+          <div class="skill-category-card">
+            <div class="skill-icon-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="m4.93 4.93 4.24 4.24"></path>
+                  <path d="m14.83 9.17 4.24-4.24"></path>
+                  <path d="m14.83 14.83 4.24 4.24"></path>
+                  <path d="m9.17 14.83-4.24 4.24"></path>
+                </svg>
               </div>
-              <div class="skill-tags">
-                <span class="skill-tag">Verification & Validation</span>
-                <span class="skill-tag">ASME Code Compliance</span>
-                <span class="skill-tag">Technical Mentorship</span>
-                <span class="skill-tag">Peer Review</span>
+              <h4>Materials & Microscale</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">MEMS Mechanics</span>
+              <span class="skill-tag">Micro-tribology & Friction</span>
+              <span class="skill-tag">Contact Topography (AFM)</span>
+              <span class="skill-tag">Thin Film Mechanics</span>
+              <span class="skill-tag">Constitutive Modeling</span>
+              <span class="skill-tag">Multi-Scale Plasticity</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 4 -->
+          <div class="skill-category-card">
+            <div class="skill-icon-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg>
               </div>
+              <h4>Engineering Practices</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Verification & Validation</span>
+              <span class="skill-tag">ASME Code Compliance</span>
+              <span class="skill-tag">Technical Mentorship</span>
+              <span class="skill-tag">Peer Review</span>
             </div>
           </div>
         </div>
       </div>
+      </div>
     </section>
-
 
     <!-- =======================================================================
          Contact Section
          ======================================================================= -->
-    <section id="contact" class="section" style="background-color: var(--bg-secondary);">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Get in Touch</span>
-          <h2 class="section-title">Let's Discuss Your Engineering Challenge</h2>
-          <p class="section-subtitle">
-            Whether you have an upcoming modeling challenge, require a consultation, or want to discuss research collaborations, send a message below.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <!-- Left Column: Contact Cards -->
-          <div class="contact-info-cards">
-            <!-- Email Card -->
-            <div class="contact-card">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </div>
-              <div class="contact-card-content">
-                <h4>Direct Email</h4>
-                <p>
-                  <a href="mailto:sshroff@andrew.cmu.edu">sshroff@andrew.cmu.edu</a>
-                  <button class="copy-email-btn copy-trigger" data-copy="sshroff@andrew.cmu.edu" title="Copy email address" aria-label="Copy email">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  </button>
-                </p>
-                <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-top: 4px;">Primary communication channel for consulting inquiries.</span>
-              </div>
-            </div>
-
-            <!-- Location Card -->
-            <div class="contact-card">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <div class="contact-card-content">
-                <h4>Location & Availability</h4>
-                <p>Pittsburgh, Pennsylvania, USA</p>
-                <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-top: 4px;">Available for remote consulting worldwide and on-site visits across North America.</span>
-              </div>
-            </div>
-
-
-            <!-- Response Time Guarantee -->
-            <div class="contact-card">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <div class="contact-card-content">
-                <h4>Prompt Turnaround</h4>
-                <p>Typically replies within a few days</p>
-                <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-top: 4px;">All inquiries are treated with strict confidentiality.</span>
-              </div>
-            </div>
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Get in Touch</span>
+            <h2 class="section-title">Let's Discuss Your Engineering Challenge</h2>
+            <p class="section-subtitle">
+              Whether you have an upcoming modeling challenge, require a consultation, or want to discuss research
+              collaborations, send a message below.
+            </p>
           </div>
 
-          <!-- Right Column: Interactive Contact Form -->
-          <div class="contact-form-container">
-            <h3>Send a Message</h3>
-            <p>Fill out the form below to initiate a discussion or request a formal project proposal.</p>
-
-            <form id="contact-form" novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name" class="form-label">Full Name *</label>
-                  <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Dr. Jane Smith" required>
-                  <span class="form-error">Please enter your name.</span>
+          <div class="contact-grid">
+            <!-- Left Column: Contact Cards -->
+            <div class="contact-info-cards">
+              <!-- Email Card -->
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
                 </div>
-                <div class="form-group">
-                  <label for="email" class="form-label">Email Address *</label>
-                  <input type="email" id="email" name="email" class="form-input" placeholder="jane@company.com" required>
-                  <span class="form-error">Please provide a valid email.</span>
+                <div class="contact-card-content">
+                  <h4>Direct Email</h4>
+                  <p>
+                    <a href="mailto:sshroff@andrew.cmu.edu">sshroff@andrew.cmu.edu</a>
+                    <button class="copy-email-btn copy-trigger" data-copy="sshroff@andrew.cmu.edu"
+                      title="Copy email address" aria-label="Copy email">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                    </button>
+                  </p>
+                  <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-top: 4px;">Primary
+                    communication channel for consulting inquiries.</span>
                 </div>
               </div>
 
-              <div class="form-group">
-                <label for="service" class="form-label">Service of Interest</label>
-                <select id="service" name="service" class="form-select">
-                  <option value="AI/ML">AI/ML</option>
-                  <option value="Teaching">Teaching</option>
-                  <option value="Technical Advisory & Peer Review">Technical Advisory & Peer Review</option>
-                  <option value="General Research Inquiry">General Research Inquiry</option>
-                  <option value="Other">Other</option>
-				  
-                </select>
+              <!-- Location Card -->
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-card-content">
+                  <h4>Location & Availability</h4>
+                  <p>Pittsburgh, Pennsylvania, USA</p>
+                  <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-top: 4px;">Available
+                    for remote consulting worldwide and on-site visits across North America.</span>
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="message" class="form-label">Project Scope & Details *</label>
-                <textarea id="message" name="message" class="form-textarea" placeholder="Describe the physical problem, required timeline, and deliverables..." required></textarea>
-                <span class="form-error">Please enter your message details.</span>
+              <!-- Response Time Guarantee -->
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-card-content">
+                  <h4>Prompt Turnaround</h4>
+                  <p>Typically replies within a few days</p>
+                  <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-top: 4px;">All
+                    inquiries are treated with strict confidentiality.</span>
+                </div>
               </div>
+            </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
-                <span>Submit Inquiry</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-              </button>
-            </form>
+            <!-- Right Column: Interactive Contact Form -->
+            <div class="contact-form-container">
+              <h3>Send a Message</h3>
+              <p>Fill out the form below to initiate a discussion or request a formal project proposal.</p>
+
+              <form id="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name" class="form-label">Full Name *</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Dr. Jane Smith"
+                      required>
+                    <span class="form-error">Please enter your name.</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="jane@company.com"
+                      required>
+                    <span class="form-error">Please provide a valid email.</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="service" class="form-label">Service of Interest</label>
+                  <select id="service" name="service" class="form-select">
+                    <option value="AI/ML">AI/ML</option>
+                    <option value="Teaching">Teaching</option>
+                    <option value="Technical Advisory & Peer Review">Technical Advisory & Peer Review</option>
+                    <option value="General Research Inquiry">General Research Inquiry</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Project Scope & Details *</label>
+                  <textarea id="message" name="message" class="form-textarea"
+                    placeholder="Describe the physical problem, required timeline, and deliverables..."
+                    required></textarea>
+                  <span class="form-error">Please enter your message details.</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  <span>Submit Inquiry</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   </main>
 
   <!-- =========================================================================
@@ -665,10 +749,10 @@
       <div class="modal-content">
         <span id="modal-tag" class="modal-header-tag">Category</span>
         <h3 id="modal-title" class="modal-title">Project Title</h3>
-        
+
         <div class="modal-body">
           <p id="modal-overview" style="margin-bottom: 1.25rem; font-size: 1.05rem;"></p>
-          
+
           <h4>Technical Methodology & Approach</h4>
           <ul id="modal-methodology"></ul>
 
@@ -680,7 +764,8 @@
         </div>
 
         <div class="modal-footer">
-          <a href="#contact" class="btn btn-primary btn-sm" onclick="document.getElementById('project-modal').classList.remove('active'); document.body.style.overflow = '';">
+          <a href="#contact" class="btn btn-primary btn-sm"
+            onclick="document.getElementById('project-modal').classList.remove('active'); document.body.style.overflow = '';">
             Discuss Similar Project
           </a>
         </div>
@@ -725,7 +810,9 @@
           &copy; <span class="current-year">2026</span> Dr. Sameer Shroff. All rights reserved.
         </div>
         <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
           <span>Back to Top</span>
         </button>
       </div>
@@ -735,4 +822,5 @@
   <!-- Client Script -->
   <script src="js/main.js"></script>
 </body>
+
 </html>
