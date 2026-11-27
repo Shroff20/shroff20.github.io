@@ -221,6 +221,10 @@ button, input, textarea, select {
   position: relative;
 }
 
+section[id] {
+  scroll-margin-top: var(--nav-height);
+}
+
 /* --------------------------------------------------------------------------
    3. Section Typography
    -------------------------------------------------------------------------- */
@@ -1027,8 +1031,8 @@ button, input, textarea, select {
    9. Technical Skills & Competencies (Playful Color Accents per Card)
    -------------------------------------------------------------------------- */
 .skills-section-wrapper {
-  margin-top: 4.5rem;
-  padding-top: 4rem;
+  margin-top: 0;
+  padding: 5.5rem 0 6rem;
   border-top: 1px solid var(--border-subtle);
 }
 

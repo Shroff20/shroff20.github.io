@@ -82,21 +82,34 @@ function initNavigation() {
 
   // Active Link Tracking via Scroll position
   function updateActiveNavLink() {
-    const scrollY = window.pageYOffset + 120;
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop;
-      const sectionId = current.getAttribute('id');
-      const targetLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
-      
-      if (targetLink) {
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          links.forEach(l => l.classList.remove('active'));
-          targetLink.classList.add('active');
+    const scrollY = window.scrollY + 140;
+    let activeId = null;
+
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      const lastSection = sections[sections.length - 1];
+      if (lastSection) activeId = lastSection.getAttribute('id');
+    } else {
+      sections.forEach(current => {
+        const rect = current.getBoundingClientRect();
+        const sectionTop = rect.top + window.scrollY;
+        const sectionBottom = sectionTop + rect.height;
+
+        if (scrollY >= sectionTop && scrollY < sectionBottom) {
+          activeId = current.getAttribute('id');
         }
+      });
+    }
+
+    links.forEach(l => l.classList.remove('active'));
+    if (activeId) {
+      const targetLink = document.querySelector(`.nav-link[href="#${activeId}"]`);
+      if (targetLink) {
+        targetLink.classList.add('active');
       }
-    });
+    }
   }
+
+  updateActiveNavLink();
 }
 
 /* ==========================================================================
