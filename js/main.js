@@ -22,8 +22,8 @@ function initTheme() {
   const storedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   
-  // Default to stored theme or system preference (or dark as default)
-  const currentTheme = storedTheme || (prefersDark ? 'dark' : 'dark');
+  // Default to stored theme or light as default
+  const currentTheme = storedTheme || 'light';
   document.documentElement.setAttribute('data-theme', currentTheme);
 
   if (toggleBtn) {
@@ -44,7 +44,7 @@ function initNavigation() {
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
   const links = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('section[id]');
+  const sections = document.querySelectorAll('section[id], #skills');
 
   // Sticky header class toggle
   window.addEventListener('scroll', () => {
