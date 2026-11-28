@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initClipboard();
   initBackToTop();
   setCurrentYear();
+  initScrollReveal();
 });
 
 /* ==========================================================================
@@ -488,5 +489,43 @@ function setCurrentYear() {
   const year = new Date().getFullYear();
   yearEls.forEach(el => {
     el.textContent = year;
+  });
+}
+
+/* ==========================================================================
+   10. Scroll Reveal
+   ========================================================================== */
+function initScrollReveal() {
+  // If the browser honours prefers-reduced-motion, make everything visible
+  // immediately so the CSS fallback alone is sufficient.
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // fire once
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -48px 0px'
+    }
+  );
+
+  // Observe all reveal elements that are NOT in the hero (above-the-fold)
+  document.querySelectorAll('.reveal').forEach(el => {
+    // Skip elements inside #hero so they appear immediately
+    if (!el.closest('#hero')) {
+      observer.observe(el);
+    } else {
+      el.classList.add('visible');
+    }
   });
 }
