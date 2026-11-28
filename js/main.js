@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   setCurrentYear();
   initScrollReveal();
+  initLogoAnimation();
 });
 
 /* ==========================================================================
@@ -527,5 +528,40 @@ function initScrollReveal() {
     } else {
       el.classList.add('visible');
     }
+  });
+}
+
+/* ==========================================================================
+   11. Logo Collision Animation
+   ========================================================================== */
+function initLogoAnimation() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  // Helper: restart CSS animations on a set of elements via reflow
+  function restartAnimations(elements) {
+    elements.forEach(el => {
+      el.style.animation = 'none';
+      void el.offsetWidth; // force reflow
+      el.style.animation = '';
+    });
+  }
+
+  // Nav + footer brand logos
+  document.querySelectorAll('.brand-logo').forEach(logo => {
+    const badge  = logo.querySelector('.brand-badge');
+    const logoS1 = logo.querySelector('.logo-s1');
+    const logoS2 = logo.querySelector('.logo-s2');
+    if (!badge || !logoS1 || !logoS2) return;
+    logo.addEventListener('mouseenter', () => restartAnimations([badge, logoS1, logoS2]));
+  });
+
+  // Hero card avatar
+  document.querySelectorAll('.hero-card').forEach(card => {
+    const badge  = card.querySelector('.avatar-graphic');
+    const logoS1 = card.querySelector('.avatar-graphic .logo-s1');
+    const logoS2 = card.querySelector('.avatar-graphic .logo-s2');
+    if (!badge || !logoS1 || !logoS2) return;
+    card.addEventListener('mouseenter', () => restartAnimations([badge, logoS1, logoS2]));
   });
 }
